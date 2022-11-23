@@ -1,0 +1,92 @@
+
+<div class="row page-titles">
+                            <div class="col-md-5 col-8 align-self-center">
+                                <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                    <li class="breadcrumb-item active">Dashboard</li>
+                                </ol>
+                            </div>
+                        </div>  
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <ul class="nav nav-tabs customtab" role="tablist">
+                                            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#list"
+                                                    role="tab"><span class="hidden-sm-up"><i class="ti-list"></i></span> <span
+                                                        class="hidden-xs-down">List</span></a> </li>
+                                            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#addnew"
+                                                    role="tab"><span class="hidden-sm-up"><i class="ti-plus"></i></span> <span
+                                                        class="hidden-xs-down">Add New</span></a> </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="clearfix">&nbsp;</div>
+                                            <div class="tab-pane active" id="list" role="tabpanel">
+                                                <div class="clearfix">&nbsp;</div>
+                                                <input type="hidden" name="del_href" id="del_href" value="/mng-emp/pt-trsh-emp" />
+                                                <div class="table-responsive">
+                                                    <table id="tbl_data"
+                                                        class="table display table-bordered table-striped no-wrap">
+                                                        <thead>
+                                                            <th>#</th>
+                                                            <th>First Name</th>
+                                                            <th>Last Name</th>
+                                                            <th>Department</th>
+                                                            <th>Designation</th>
+                                                            <th>Contact No</th>
+                                                            <th width="5%"></th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>f_name</td>
+                                                                <td>l_name</td>
+                                                                <td>dept</td>
+                                                                <td>designation</td>
+                                                                <td>9023</td>
+                                                                <td class="footable-editing footable-last-visible"
+                                                                    style="display: table-cell;">
+                                                                    <div class="btn-group btn-group-xs" role="group"><button
+                                                                            type="button"
+                                                                            class="btn btn-secondary footable-edit edit_row"
+                                                                            data-value="{{tr['employee_id']}}"><span
+                                                                                class="fas fa-pencil-alt"
+                                                                                aria-hidden="true"></span></button> <button
+                                                                            type="button"
+                                                                            class="btn btn-secondary footable-delete delete_row"
+                                                                            data-value="{{tr['employee_id']}}"><span
+                                                                                class="fas fa-trash-alt"
+                                                                                aria-hidden="true"></span></button></div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="addnew" role="tabpanel">
+                                                <form id="frm_main" action="/mng-emp" method="POST"
+                                                    enctype="multipart/form-data">
+                                                    <input type="hidden" name="hid_employee_id" id="hid_employee_id" value="0" />
+
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <button type="button"
+                                                                    class="btn btn-info text-uppercase waves-effect waves-light"
+                                                                    id="btn_save" onclick="add_condition_to_global_repo()"
+                                                                    style="float: right;"> Save</button>
+                                                                <button type="button"
+                                                                    class="btn text-uppercase waves-effect waves-light btn-secondary"
+                                                                    id="btn_clear"
+                                                                    style="float: right; margin-right: 10px;">Clear</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
