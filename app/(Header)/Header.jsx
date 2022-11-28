@@ -3,7 +3,7 @@ import './header.css';
 
 export default Header = () => {
     return(
-        <Head>
+        <head>
             <meta charSet="utf-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,6 +37,6 @@ export default Header = () => {
                 rel="stylesheet" />
             <link href="./assets/css/style.css" rel="stylesheet" />
             <link href="./assets/css/colors/blue.css" id="theme" rel="stylesheet" />
-        </Head>
+        </head>
     )
 }
